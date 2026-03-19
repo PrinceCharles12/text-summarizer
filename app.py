@@ -8,7 +8,7 @@ st.write("Enter text below to generate summary")
 # Load model
 @st.cache_resource
 def load_model():
-    return pipeline("summarization", model="facebook/bart-large-cnn")
+    return pipeline(task="summarization", model="sshleifer/distilbart-cnn-12-6")
 
 summarizer = load_model()
 
