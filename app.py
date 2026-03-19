@@ -8,9 +8,10 @@ st.write("Enter text below to generate summary")
 # Load model
 @st.cache_resource
 def load_model():
-    return pipeline(task="summarization", model="sshleifer/distilbart-cnn-12-6")
-
-summarizer = load_model()
+    return pipeline(
+        "summarization",
+        model="sshleifer/distilbart-cnn-12-6"
+    )
 
 # Input text
 text = st.text_area("Enter text:")
